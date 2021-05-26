@@ -1,0 +1,10 @@
+{% extends "core/base.html" %}
+{% block content %}
+    <h2>Wylogowano pomyślnie</h2>
+    <div class="border-top pt-3">
+        <small class="text-muted">
+            zaloguj ponownie <a href={% url 'account-login' %}>Zaloguj</a>
+        </small>
+    </div>
+
+{% endblock %}

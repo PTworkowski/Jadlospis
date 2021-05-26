@@ -1,0 +1,21 @@
+{% extends "core/base.html" %}
+{% load crispy_forms_tags %}
+{% block content %}
+    <div class="site_content">
+        <form method="POST">
+            {% csrf_token %}
+            <fieldset class="form_settings">
+                <legend class="site_content">Logowanie do platformy</legend>
+                {{ form|crispy }}
+            </fieldset>
+            <div class="form-group">
+                <button class="btn btn-outline-info" type="submit">Zaloguj</button>
+            </div>
+        </form>
+        <div class="border-top pt-3">
+            <small class="textarea">
+                Nie masz konta? <a class="ml-2" href="{% url 'account-register' %}">Zarejestruj się</a>
+            </small>
+        </div>
+    </div>
+{% endblock %}
